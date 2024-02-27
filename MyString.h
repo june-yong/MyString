@@ -13,6 +13,7 @@ class MyString
     MyString() = default;
     MyString(const char* message);
     MyString& operator+(MyString& message);
+    MyString& operator+(const char* message);
     void MyStringError(int ErrorNo);
     friend std::ostream& operator<<(std::ostream& os, const MyString& message);
 };

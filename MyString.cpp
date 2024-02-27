@@ -30,6 +30,21 @@ MyString& MyString::operator+(MyString& message)
     return *this;
 }
 
+MyString& MyString::operator+(const char* message)
+{
+    for (int i = 0; '\0' != message[i]; ++i)
+    {
+        if (capacitor - 1 < count + i)
+        {
+            MyString::MyStringError(capacitor);
+            break;
+        }
+        string[count] = message[i];
+        count++;
+    }
+    return *this;
+}
+
 void MyString::MyStringError(int ErrorNo)
 {
     if (256 == ErrorNo)

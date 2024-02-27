@@ -8,7 +8,9 @@ std::string을 MyString Class를 통해서 구현해 보고자함
    ex1) MyString str1 = "Hellow";  
    ex2) MyString str2 = "World";  
 2. 객체 결합
-   연산자 오버로딩을 이용해서 객체 결합을 구현  
-   ex) 1항의 str1 + str2 결과는 "HellowWorld" 
+   - 연산자 오버로딩을 이용해서 객체 결합을 구현  
+     ex) 1항의 str1 + str2 결과는 "HellowWorld"
+   - 연산자 오버로딩 과 함수 오버로딩을 이용해서 객체 결합 구현
+     ex) str1 + " " + str2 결과는 "Hellow World" 
 
  
