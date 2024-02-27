@@ -15,11 +15,26 @@ MyString::MyString(const char* message)
     }
 }
 
+MyString& MyString::operator+(MyString& message)
+{
+    for (int i = 0; i < message.count; ++i)
+    {
+        if (capacitor - 1 < count + i)
+        {
+            MyString::MyStringError(capacitor);
+            break;
+        }
+        string[count] = message.string[i];
+        count++;
+    }
+    return *this;
+}
+
 void MyString::MyStringError(int ErrorNo)
 {
     if (256 == ErrorNo)
     {
-        std::cout << "입력된 문자열이 길어요 ~~!! \n";
+        std::cout << "입력된 문자열이 너무 길어요 ~~!! \n";
     }
 }
 

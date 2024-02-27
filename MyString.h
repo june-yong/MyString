@@ -12,6 +12,7 @@ class MyString
   public:
     MyString() = default;
     MyString(const char* message);
+    MyString& operator+(MyString& message);
     void MyStringError(int ErrorNo);
     friend std::ostream& operator<<(std::ostream& os, const MyString& message);
 };
