@@ -9,6 +9,11 @@ int main()
     std::cout << str1 << std::endl;
     std::cout << str2 << std::endl;
 
+    std::cout << str1 + str2 << std::endl;
+    std::cout << str1 + " " + str2 << std::endl;
+
+    std::cin >> str1 >> str2;
+
     std::cout << str1 + " " + str2 << std::endl;
 
     return 0;

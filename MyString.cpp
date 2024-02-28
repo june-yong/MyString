@@ -62,3 +62,18 @@ std::ostream& operator<<(std::ostream& os, const MyString& message)
 
     return os;
 }
+
+std::istream& operator>>(std::istream& is, MyString& message)
+{
+    char temp[256];
+
+    is >> temp;
+
+    message.count = 0;
+    for (int i = 0; '\0' != temp[i]; ++i)
+    {
+        message.string[i] = temp[i];
+        message.count++;
+    }
+    return is;
+}
